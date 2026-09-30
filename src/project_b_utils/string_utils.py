@@ -27,3 +27,13 @@ def remove_spaces(value: str) -> str:
 def count_characters(value: str) -> int:
     """Возвращает количество символов в строке."""
     return len(value)
+
+def capitalize_text(text):
+    return text.strip().capitalize()
+
+
+def truncate_text(text, length=50):
+    if len(text) <= length:
+        return text
+
+    return text[:length] + "..."

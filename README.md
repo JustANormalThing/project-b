@@ -21,6 +21,9 @@
 ## Установка
 
 Из директории проекта:
-
-```bash
-pip install .
+```
+pip install -e .
+```
+```
+git clone https://github.com/JustANormalThing/project-b
+```

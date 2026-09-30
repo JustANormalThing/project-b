@@ -2,6 +2,8 @@ README.md
 setup.py
 src/project_b_utils/__init__.py
 src/project_b_utils/date_utils.py
+src/project_b_utils/file_utils.py
+src/project_b_utils/logger_utils.py
 src/project_b_utils/string_utils.py
 src/project_b_utils.egg-info/PKG-INFO
 src/project_b_utils.egg-info/SOURCES.txt
