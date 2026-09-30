@@ -1,7 +1,6 @@
 from datetime import date, timedelta
 
 
-def get_current_date() -> date:  #New
 def get_current_date() -> date:  #New23  
     """Возвращает текущую дату."""
     return date.today()
