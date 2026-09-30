@@ -19,3 +19,13 @@ def days_between(first: date, second: date) -> int:
 def add_days(value: date, days: int) -> date:
     """Добавляет указанное количество дней к дате."""
     return value + timedelta(days=days)
+
+
+def is_weekend(value: date) -> bool:
+    """Проверяет, является ли дата выходным днём."""
+    return value.weekday() >= 5
+
+
+def get_weekday_name(value: date) -> str:
+    """Возвращает номер дня недели."""
+    return value.strftime("%A")

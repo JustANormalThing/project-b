@@ -17,3 +17,13 @@ def count_words(value: str) -> int:
 def capitalize_words(value: str) -> str:
     """Делает первую букву каждого слова заглавной."""
     return value.title()
+
+
+def remove_spaces(value: str) -> str:
+    """Удаляет пробелы из строки."""
+    return value.replace(" ", "")
+
+
+def count_characters(value: str) -> int:
+    """Возвращает количество символов в строке."""
+    return len(value)
