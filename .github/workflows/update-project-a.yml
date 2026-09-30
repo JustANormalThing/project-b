@@ -21,7 +21,7 @@ jobs:
 
       - name: Update Project B submodule
         run: |
-          git submodule update --remote project-b
+          git submodule update --remote libs/project-b
 
       - name: Commit changes
         run: |
