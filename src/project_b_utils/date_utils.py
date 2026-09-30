@@ -1,7 +1,11 @@
 from datetime import date, timedelta
 
 
+<<<<<<< HEAD
 def get_current_date() -> date:  ######sadsss
+=======
+def get_current_date() -> date:  ###Somethingsdsd
+>>>>>>> feature/dev-b
     """Возвращает текущую дату."""
     return date.today()
 
