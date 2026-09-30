@@ -11,7 +11,7 @@ def format_date(value: date, format_string: str = "%d.%m.%Y") -> str: #Bonus
     return value.strftime(format_string)
 
 
-def days_between(first: date, second: date) -> int:
+def days_between(first: date, second: date) -> int: #Return tests
     """Возвращает количество дней между двумя датами."""
     return abs((second - first).days)
 

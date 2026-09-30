@@ -1,0 +1,42 @@
+name: Update Project A
+
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - completed
+
+jobs:
+  update-submodule:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Project A
+        uses: actions/checkout@v4
+        with:
+          repository: JustANormalThing/project-a
+          token: ${{ secrets.PROJECT_A_TOKEN }}
+          submodules: true
+
+      - name: Update Project B submodule
+        run: |
+          git submodule update --remote project-b
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add project-b
+
+          if git diff --cached --quiet; then
+            echo "Submodule is already up to date"
+            exit 0
+          fi
+
+          git commit -m "Update Project B submodule"
+
+      - name: Push changes
+        run: |
+          git push origin main
