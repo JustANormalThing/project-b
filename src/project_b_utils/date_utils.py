@@ -1,12 +1,12 @@
 from datetime import date, timedelta
 
 
-def get_current_date() -> date:  ######sadsss
+def get_current_date() -> date:  
     """Возвращает текущую дату."""
     return date.today()
 
 
-def format_date(value: date, format_string: str = "%d.%m.%Y") -> str:#sdasdasdas
+def format_date(value: date, format_string: str = "%d.%m.%Y") -> str:
     """Форматирует дату в строку."""
     return value.strftime(format_string)
 
