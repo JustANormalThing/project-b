@@ -1,11 +1,11 @@
 from datetime import date
 
-from src.date_utils import (
+from project_b_utils.date_utils import (
     add_days,
     days_between,
     format_date,
 )
-from src.string_utils import (
+from project_b_utils.string_utils import (
     capitalize_words,
     count_words,
     is_palindrome,
@@ -50,19 +50,19 @@ def test_capitalize_words():
 
 def test_is_weekend():
     from datetime import date
-    from src.date_utils import is_weekend
+    from project_b_utils.date_utils import is_weekend
 
     assert is_weekend(date(2026, 9, 26)) is True
     assert is_weekend(date(2026, 9, 28)) is False
 
 
 def test_remove_spaces():
-    from src.string_utils import remove_spaces
+    from project_b_utils.string_utils import remove_spaces
 
     assert remove_spaces("Hello World") == "HelloWorld"
 
 
 def test_count_characters():
-    from src.string_utils import count_characters
+    from project_b_utils.string_utils import count_characters
 
     assert count_characters("Hello") == 5
